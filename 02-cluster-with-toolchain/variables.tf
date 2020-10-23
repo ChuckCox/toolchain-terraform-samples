@@ -18,7 +18,7 @@ variable "resource_group_id" {
 }
 
 variable "machine_type" {
-   default = "free"
+   default = "b2c.4x16"
 }
 variable "hardware" {
    default = "shared"
