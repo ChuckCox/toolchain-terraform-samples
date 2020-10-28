@@ -1,5 +1,6 @@
 resource "random_string" "random" {
   length = 4
+  min_lower = 4
 }
 
 data "ibm_resource_group" "group" {
