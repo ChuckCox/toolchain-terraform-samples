@@ -18,18 +18,19 @@ resource "ibm_container_cluster" "cluster" {
   machine_type      = var.machine_type
   hardware          = var.hardware
   kube_version      = var.kube_version
-  public_vlan_id    = "1410"
-  private_vlan_id   = "1256"
+  # NOTE: The below commented out variables are optional
+  # public_vlan_id    = "1410"
+  # private_vlan_id   = "1256"
   resource_group_id = data.ibm_resource_group.group.id
 }
 
 
 module "ibm-kubernetes-toolchain" {
-  source            = "github.com/triceam/ibm-kubernetes-toolchain-module"
+  source            = "github.com/ChuckCox/ibm-kubernetes-toolchain-module"
   ibmcloud_api_key  = var.ibmcloud_api_key
   region            = "us-south"
   toolchain_name    = "terraform-toolchain-${random_string.random.result}"
-  application_repo  = "https://github.com/triceam/nodejs-express-app"
+  application_repo  = "https://github.com/ChuckCox/nodejs-express-app"
   resource_group    = var.resource_group
   cluster_name      = ibm_container_cluster.cluster.name
   cluster_namespace = var.cluster_namespace
