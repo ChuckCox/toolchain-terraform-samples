@@ -42,7 +42,7 @@ variable "public_vlan_id" {
 
 variable kube_version {
   #default = "3.11.104_openshift"
-  default = "1.17"
+  default = "1.18"
 }
 
 variable "cluster_namespace" {
