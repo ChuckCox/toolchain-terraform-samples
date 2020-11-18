@@ -32,12 +32,12 @@ variable "default_pool_size" {
   default = "1"
 }
 
-variable "private_vlan_id" {
-  default = "2912946"
+variable "private_vlan_num" {
+  default = "1256"
 }
 
-variable "public_vlan_id" {
-  default = "2912944"
+variable "public_vlan_num" {
+  default = "1410"
 }
 
 variable kube_version {
