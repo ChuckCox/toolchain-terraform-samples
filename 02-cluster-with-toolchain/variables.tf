@@ -45,11 +45,6 @@ variable kube_version {
   default = "1.17"
 }
 
-
-
-
-
-
 variable "cluster_namespace" {
   type        = string
   description = "Kubernetes namespace to deploy into"
