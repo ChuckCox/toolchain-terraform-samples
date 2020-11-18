@@ -9,6 +9,7 @@ data "ibm_resource_group" "group" {
 
 provider "ibm" {
   ibmcloud_api_key   = var.ibmcloud_api_key
+  version            = "~> 1.14"
 }
 
 resource "ibm_container_cluster" "cluster" {
