@@ -18,9 +18,8 @@ resource "ibm_container_cluster" "cluster" {
   machine_type      = var.machine_type
   hardware          = var.hardware
   kube_version      = var.kube_version
-  # NOTE: The below commented out variables are optional
-  # public_vlan_id    = "1410"
-  # private_vlan_id   = "1256"
+  public_vlan_id    = "1410"
+  private_vlan_id   = "1256"
   resource_group_id = data.ibm_resource_group.group.id
 }
 
