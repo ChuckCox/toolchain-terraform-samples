@@ -22,3 +22,9 @@ variable "container_registry_namespace" {
   type        = string
   description = "IBM Container Registry namespace to save image into"
 }
+
+variable "language" {
+  type        = string
+  description = "Language of app to be deployed with the toolchain. Available options: 'nodejs-express-app', 'java-liberty-app', 'java-spring-app'"
+  default = "nodejs-express-app"
+}
